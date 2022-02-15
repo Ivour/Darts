@@ -6,30 +6,39 @@ import Chip from "@mui/material/Chip";
 const PlayerScore = () => {
   return (
     <section className={`${styles.scores} ${styles["scores--active"]}`}>
-      <Typography className={styles["scores__total"]}>501</Typography>
+      <Typography className={styles["scores__total"]} color="secondary">
+        501
+      </Typography>
       <Typography className={styles["scores__player"]}>Player One</Typography>
       <div className={styles["scores__partial-scores"]}>
         <Chip
-          label={11}
+          label={1}
           size="small"
           variant="outlined"
-          sx={{ borderRadius: "0.6em" }}
+          color="secondary"
+          sx={{ borderRadius: "0.6em", minWidth: "2.5em" }}
         ></Chip>
         <Chip
-          label={40}
+          label={null}
           size="small"
           variant="outlined"
-          sx={{ margin: "0 0.5em", borderRadius: "0.6em" }}
+          color="secondary"
+          sx={{ margin: "0 0.5em", borderRadius: "0.6em", minWidth: "2.5em" }}
         ></Chip>
         <Chip
-          label={20}
+          label={2}
           size="small"
           variant="outlined"
-          sx={{ borderRadius: "0.6em" }}
+          color="secondary"
+          sx={{ borderRadius: "0.6em", minWidth: "2.5em" }}
         ></Chip>
       </div>
-      <Typography className={styles["scores__sum"]}>123</Typography>
-      <div className={styles["scores__sets"]}>sets,legs</div>
+      <Typography className={styles["scores__sum"]} f>
+        123
+      </Typography>
+      <Typography className={styles["scores__sets"]} fontSize="small">
+        sets: 0 legs:1
+      </Typography>
       <Typography className={styles["scores__dart-count"]} fontSize="small">
         dart count
       </Typography>

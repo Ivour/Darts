@@ -1,0 +1,15 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 0px 0px 5px 5px #69e3eb;
+  box-shadow: 0px 0px 30px -9px #69e3eb;
+}
+.nav__logo {
+  color: #f09f44;
+}
+
+.nav__button {
+  border-radius: 0.6em;
+  margin: 0.3em;
+}

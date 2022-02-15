@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import styles from "./Game.module.css";
 import { Button } from "@mui/material";
 import PlayerScore from "./PlayrerScore";
+import Navbar from "./Navbar";
 
 const scoreNums = Array.from({ length: 20 }, (_, i) => i + 1);
 scoreNums.push(...[25, 50]);
@@ -9,9 +10,7 @@ scoreNums.push(...[25, 50]);
 const Game = () => {
   return (
     <Fragment>
-      <header className={styles.nav}>
-        <h1>ds</h1>
-      </header>
+      <Navbar isGame={true} />
       <div className={styles.game}>
         <PlayerScore />
         <PlayerScore />

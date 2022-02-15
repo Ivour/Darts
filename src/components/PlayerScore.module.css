@@ -1,6 +1,6 @@
 .scores {
   width: 90%;
-  background-color: rgb(114, 114, 114);
+  background-color: rgb(92, 92, 92);
 
   margin: 0.5em auto;
   border-radius: 0.6rem;
@@ -16,6 +16,8 @@
 
 .scores__total {
   grid-area: total;
+  font-weight: bold;
+  font-size: 130%;
 }
 .scores__player {
   grid-area: player;
