@@ -1,10 +1,12 @@
-.game {
+.nav {
+  font-size: 50%;
 }
 
-.game__scores {
-  height: 50vh;
-  width: 100vw;
-  border: 1px solid black;
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 60vh;
 }
 
 .game__buttons-container {
@@ -17,4 +19,10 @@
 .game__buttons {
   margin: 0.3em;
   flex: 1;
+  background-image: linear-gradient(to right top, #69a2eb, #69e3eb);
+}
+
+.game__buttons--double {
+  background-image: unset;
+  background-color: #f09f44;
 }

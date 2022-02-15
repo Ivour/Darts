@@ -1,0 +1,42 @@
+.scores {
+  width: 90%;
+  background-color: rgb(114, 114, 114);
+
+  margin: 0.5em auto;
+  border-radius: 0.6rem;
+  justify-items: center;
+  align-items: center;
+  display: grid;
+  grid-template-areas:
+    "total partial-scores sets"
+    "total partial-scores dart-count"
+    "player sum dart-count"
+    "player sum average";
+}
+
+.scores__total {
+  grid-area: total;
+}
+.scores__player {
+  grid-area: player;
+}
+.scores__partial-scores {
+  grid-area: partial-scores;
+}
+.scores__sum {
+  grid-area: sum;
+}
+.scores__sets {
+  grid-area: sets;
+}
+.scores__dart-count {
+  grid-area: dart-count;
+}
+.scores__average {
+  grid-area: average;
+}
+
+.scores--active {
+  border-left: 3px solid #f09f44;
+  border-bottom: 3px solid #f09f44;
+}
