@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Typography, Button } from "@mui/material";
 import React from "react";
 import AddPlayer from "./AddPlayer";
 import PlayerCheckbox from "./PlayerCheckbox";
@@ -11,6 +11,14 @@ const Players = () => {
       <PlayerCheckbox user="Ivour" />
       <PlayerCheckbox user="Ivour" />
       <PlayerCheckbox user="Ivour" />
+      <Button
+        color="primary"
+        variant="outlined"
+        size="small"
+        sx={{ width: "fit-content" }}
+      >
+        Add New User
+      </Button>
       <AddPlayer />
     </section>
   );

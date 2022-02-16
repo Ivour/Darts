@@ -9,14 +9,14 @@ const Navbar = ({ isGame, isStartup }) => {
         <nav className={styles.nav}>
           <Button
             variant="outlined"
-            color="secondary"
+            color="primary"
             className={styles["nav__button"]}
           >
             Reset
           </Button>
           <Button
             variant="outlined"
-            color="secondary"
+            color="primary"
             className={styles["nav__buttons"]}
           >
             Cancel
@@ -29,14 +29,14 @@ const Navbar = ({ isGame, isStartup }) => {
           <Typography className={styles["nav__logo"]}>DARTS APP</Typography>
           <Button
             variant="outlined"
-            color="secondary"
+            color="primary"
             className={styles["nav__buttons"]}
           >
             New Game
           </Button>
           <Button
             variant="outlined"
-            color="secondary"
+            color="primary"
             className={styles["nav__buttons"]}
           >
             Stats

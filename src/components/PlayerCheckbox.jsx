@@ -10,8 +10,8 @@ export default function PlayerCheckbox({ user }) {
       control={
         <Checkbox
           defaultChecked
-          icon={<RadioButtonUncheckedIcon color="secondary" />}
-          checkedIcon={<AddTaskIcon color="secondary" />}
+          icon={<RadioButtonUncheckedIcon color="primary" />}
+          checkedIcon={<AddTaskIcon color="primary" />}
         />
       }
       label={user}

@@ -15,21 +15,21 @@ const PlayerScore = () => {
           label={1}
           size="small"
           variant="outlined"
-          color="secondary"
+          color="primary"
           sx={{ borderRadius: "0.6em", minWidth: "2.5em" }}
         ></Chip>
         <Chip
           label={null}
           size="small"
           variant="outlined"
-          color="secondary"
+          color="primary"
           sx={{ margin: "0 0.5em", borderRadius: "0.6em", minWidth: "2.5em" }}
         ></Chip>
         <Chip
           label={2}
           size="small"
           variant="outlined"
-          color="secondary"
+          color="primary"
           sx={{ borderRadius: "0.6em", minWidth: "2.5em" }}
         ></Chip>
       </div>

@@ -30,7 +30,7 @@ const Game = () => {
           {["double", "triple"].map((str) => (
             <Button
               variant="contained"
-              color="secondary"
+              color="primary"
               className={`${styles["game__buttons"]} ${styles["game__buttons--double"]}`}
             >
               {str}

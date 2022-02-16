@@ -1,12 +1,16 @@
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
+  typography: {
+    color: "white",
+  },
   palette: {
+    mode: "dark",
     primary: {
-      main: "#69a2eb",
+      main: "#69e3eb",
     },
     secondary: {
-      main: "#69e3eb",
+      main: "#69a2eb",
     },
 
     warning: {
@@ -14,6 +18,24 @@ const theme = createTheme({
     },
     success: {
       main: "#90fc03",
+    },
+  },
+  components: {
+    // Name of the component
+    MuiSelect: {
+      styleOverrides: {
+        // Name of the slot
+      },
+    },
+  },
+  MuiList: {
+    styleOverrides: {
+      // Name of the slot
+      root: {
+        // Some CSS
+        color: "white",
+        backgroundColor: "#3d3d3d",
+      },
     },
   },
 });

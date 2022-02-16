@@ -11,7 +11,7 @@ const AddPlayer = () => {
       <TextField
         id="outlined-basic"
         label="Add new user"
-        color="secondary"
+        color="primary"
         variant="outlined"
         focused={true}
         size="small"
