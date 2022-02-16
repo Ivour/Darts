@@ -9,7 +9,10 @@
   color: #f09f44;
 }
 
-.nav__button {
+.nav__buttons {
   border-radius: 0.6em;
   margin: 0.3em;
+}
+.nav--game {
+  justify-content: space-around;
 }

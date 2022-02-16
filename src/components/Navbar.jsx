@@ -2,11 +2,11 @@ import React from "react";
 import styles from "./Navbar.module.css";
 import { Button, Typography } from "@mui/material";
 
-const Navbar = ({ isGame }) => {
+const Navbar = ({ isGame, isStartup }) => {
   return (
-    <nav className={styles.nav}>
+    <>
       {isGame && (
-        <div>
+        <nav className={styles.nav}>
           <Button
             variant="outlined"
             color="secondary"
@@ -17,13 +17,33 @@ const Navbar = ({ isGame }) => {
           <Button
             variant="outlined"
             color="secondary"
-            className={styles["nav__button"]}
+            className={styles["nav__buttons"]}
           >
             Cancel
           </Button>
-        </div>
+        </nav>
       )}
-    </nav>
+
+      {isStartup && (
+        <nav className={`${styles.nav} ${styles["nav--game"]}`}>
+          <Typography className={styles["nav__logo"]}>DARTS APP</Typography>
+          <Button
+            variant="outlined"
+            color="secondary"
+            className={styles["nav__buttons"]}
+          >
+            New Game
+          </Button>
+          <Button
+            variant="outlined"
+            color="secondary"
+            className={styles["nav__buttons"]}
+          >
+            Stats
+          </Button>
+        </nav>
+      )}
+    </>
   );
 };
 

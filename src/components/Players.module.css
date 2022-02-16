@@ -1,0 +1,7 @@
+.players {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border: 1px solid white;
+  margin: 2rem auto;
+}

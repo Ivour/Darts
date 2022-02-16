@@ -12,6 +12,9 @@ const theme = createTheme({
     warning: {
       main: "#efba7d",
     },
+    success: {
+      main: "#90fc03",
+    },
   },
 });
 
