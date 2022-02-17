@@ -1,8 +1,4 @@
 .start {
-  width: 90%;
-  background-color: rgb(61, 61, 61);
-  border-radius: 0.6em;
-  margin: 1em auto;
   display: flex;
   justify-content: center;
 }

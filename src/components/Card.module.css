@@ -1,0 +1,6 @@
+.card {
+  background-color: var(--section-bg-color);
+  width: 90%;
+  margin: 1em auto;
+  border-radius: 0.6rem;
+}

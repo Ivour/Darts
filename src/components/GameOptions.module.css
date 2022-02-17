@@ -1,8 +1,4 @@
 .options {
-  width: 90%;
-  background-color: rgb(61, 61, 61);
-  margin: auto;
-  border-radius: 0.6em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

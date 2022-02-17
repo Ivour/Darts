@@ -1,10 +1,8 @@
 .players {
   display: flex;
   flex-direction: column;
-  width: 90%;
   height: 16rem;
-  background-color: rgb(61, 61, 61);
-  border-radius: 0.6rem;
+
   margin: 2rem auto 1em auto;
   display: grid;
   grid-template-columns: 1fr 1fr;

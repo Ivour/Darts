@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
+import Card from "./Card";
 import styles from "./GameOptions.module.css";
 import ReusableSelect from "./ReusableSelect";
 
 const GameOptions = () => {
   return (
-    <Fragment>
+    <Card>
       <section className={styles.options}>
         <ReusableSelect
           arrValues={[501, 401, 301]}
@@ -31,7 +32,7 @@ const GameOptions = () => {
           initialVal={"single out"}
         />
       </section>
-    </Fragment>
+    </Card>
   );
 };
 
