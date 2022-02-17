@@ -1,4 +1,6 @@
 .add-player {
-  display: flex;
-  align-items: center;
+  grid-column: 1 / span 2;
+  width: 15rem;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
 }

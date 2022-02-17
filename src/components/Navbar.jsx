@@ -26,13 +26,20 @@ const Navbar = ({ isGame, isStartup }) => {
 
       {isStartup && (
         <nav className={`${styles.nav} ${styles["nav--game"]}`}>
-          <Typography className={styles["nav__logo"]}>DARTS APP</Typography>
+          {/* <Typography className={styles["nav__logo"]}>DARTS APP</Typography> */}
           <Button
             variant="outlined"
             color="primary"
             className={styles["nav__buttons"]}
           >
             New Game
+          </Button>
+          <Button
+            variant="outlined"
+            color="primary"
+            className={styles["nav__buttons"]}
+          >
+            games
           </Button>
           <Button
             variant="outlined"

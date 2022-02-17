@@ -14,7 +14,6 @@ const AddPlayer = () => {
         color="primary"
         variant="outlined"
         focused={true}
-        size="small"
         sx={{ input: { color: "white" } }}
         InputProps={{
           endAdornment: (

@@ -6,21 +6,29 @@ const GameOptions = () => {
   return (
     <Fragment>
       <section className={styles.options}>
-        <ReusableSelect arrValues={[501, 401, 301]} label={"Points"} />
+        <ReusableSelect
+          arrValues={[501, 401, 301]}
+          label={"Points"}
+          minWidth={"5rem"}
+          initialVal={501}
+        />
         <ReusableSelect
           arrValues={[1, 2, 3, 4, 5]}
           label={"Sets"}
-          minWidth={"5rem"}
+          minWidth={"4rem"}
+          initialVal={3}
         />
         <ReusableSelect
           arrValues={[1, 2, 3, 4, 5]}
           label={"Legs"}
           minWidth={"5rem"}
+          initialVal={3}
         />
         <ReusableSelect
           arrValues={["single out", "double out"]}
           label={"Check out"}
           minWidth={"8rem"}
+          initialVal={"single out"}
         />
       </section>
     </Fragment>

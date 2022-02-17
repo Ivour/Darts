@@ -19,7 +19,7 @@
 .game__buttons {
   margin: 0.3em;
   flex: 1;
-  background-image: linear-gradient(to right top, #69a2eb, #69e3eb);
+  background-image: linear-gradient(to right top, #2b75d6, #69e3eb);
 }
 
 .game__buttons--double {

@@ -7,16 +7,24 @@ import Select from "@mui/material/Select";
 export default function ReusableSelect({
   arrValues,
   label,
-  minWidth = "6rem",
+  minWidth,
+  initialVal,
 }) {
-  const [age, setAge] = React.useState("");
+  const [age, setAge] = React.useState(initialVal);
 
   const handleChange = (event) => {
     setAge(event.target.value);
   };
 
   return (
-    <FormControl sx={{ minWidth, margin: "0.5em" }}>
+    <FormControl
+      sx={{
+        flex: 1,
+        minWidth,
+        maxWidth: "10rem",
+        margin: "0.5em",
+      }}
+    >
       <InputLabel id="demo-simple-select-autowidth-label" color="warning">
         {label}
       </InputLabel>

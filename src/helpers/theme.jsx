@@ -22,19 +22,14 @@ const theme = createTheme({
   },
   components: {
     // Name of the component
-    MuiSelect: {
+    MuiButton: {
       styleOverrides: {
+        root: {
+          // Some CSS
+
+          borderRadius: "0.6rem",
+        },
         // Name of the slot
-      },
-    },
-  },
-  MuiList: {
-    styleOverrides: {
-      // Name of the slot
-      root: {
-        // Some CSS
-        color: "white",
-        backgroundColor: "#3d3d3d",
       },
     },
   },
