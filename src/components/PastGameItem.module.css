@@ -1,0 +1,20 @@
+.item {
+  display: grid;
+  grid-template-columns: 50% repeat(5, auto);
+  grid-template-rows: repeat(4, auto);
+  justify-items: center;
+  align-items: center;
+}
+
+.item__date {
+  align-self: center;
+}
+
+.item__count {
+  grid-column: 2 / -1;
+  justify-self: center;
+}
+
+.item__sets {
+  justify-self: end;
+}

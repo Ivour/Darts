@@ -4,6 +4,7 @@
   align-items: center;
   -webkit-box-shadow: 0px 0px 5px 5px #69e3eb;
   box-shadow: 0px 0px 30px -9px #69e3eb;
+  margin-bottom: 2em;
 }
 .nav__logo {
   color: #f09f44;
