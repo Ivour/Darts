@@ -1,0 +1,16 @@
+.table {
+  width: 90%;
+  max-height: 10rem;
+  overflow: scroll;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: repeat(4, auto);
+  justify-items: center;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.6em;
+  margin: 2em auto 1em auto;
+}
+
+.table__title {
+  grid-column: 1/-1;
+}
