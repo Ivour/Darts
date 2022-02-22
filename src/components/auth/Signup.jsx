@@ -1,4 +1,6 @@
 import React, { useRef, useState } from "react";
+import { auth } from "../../config/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import Card from "../layout/Card";
 import styles from "./Signup.module.css";
 import { Button, TextField } from "@mui/material";
@@ -15,6 +17,8 @@ const Signup = () => {
     if (pass !== passAgain) {
       setPassHasError(true);
       return;
+    } else {
+      createUserWithEmailAndPassword(auth, email, pass);
     }
     setPassHasError(false);
     console.log(user, email, pass);
