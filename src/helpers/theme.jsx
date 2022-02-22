@@ -32,6 +32,17 @@ const theme = createTheme({
         // Name of the slot
       },
     },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          // Some CSS
+
+          borderRadius: "0.6rem",
+          backgroundColor: "unset",
+        },
+        // Name of the slot
+      },
+    },
   },
 });
 

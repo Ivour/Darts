@@ -19,6 +19,8 @@ const StatsTable = () => {
       <StatsPlayerData />
       <StatsPlayerData />
       <StatsPlayerData />
+      <StatsPlayerData />
+      <StatsPlayerData />
     </section>
   );
 };

@@ -4,10 +4,10 @@ import { Typography } from "@mui/material";
 const StatsPlayerData = ({ player }) => {
   return (
     <>
-      <Typography>Ivour</Typography>
-      <Typography>7</Typography>
-      <Typography>6</Typography>
-      <Typography>44.32%</Typography>
+      <Typography variant="caption">Ivour</Typography>
+      <Typography variant="caption">7</Typography>
+      <Typography variant="caption">6</Typography>
+      <Typography variant="caption">44.32%</Typography>
     </>
   );
 };
