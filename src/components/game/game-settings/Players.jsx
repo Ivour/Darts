@@ -5,7 +5,7 @@ import PlayerCheckbox from "./PlayerCheckbox";
 import styles from "./Players.module.css";
 import MultipleSelect from "./MultipleSelect";
 import MultipleSelectCheckmarks from "./MultipleSelect";
-import Card from "./Card";
+import Card from "../../layout/Card";
 
 const Players = () => {
   return (

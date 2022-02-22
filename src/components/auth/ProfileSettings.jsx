@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import React from "react";
-import Card from "./Card";
+import Card from "../layout/Card";
 
 const ProfileSettings = () => {
   return (

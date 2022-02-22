@@ -1,12 +1,12 @@
 import { Fragment } from "react";
-import Game from "./components/Game";
-import Navbar from "./components/Navbar";
-import Startup from "./components/Startup";
-import PastGames from "./components/PastGames";
-import Stats from "./components/Stats";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
-import ProfileSettings from "./components/ProfileSettings";
+import Game from "./components/game/Game";
+import Navbar from "./components/layout/Navbar";
+import Startup from "./components/game/game-settings/Startup";
+import PastGames from "./components/stats/PastGames";
+import Stats from "./components/stats/Stats";
+import Login from "./components/auth/Login";
+import Signup from "./components/auth/Signup";
+import ProfileSettings from "./components/auth/ProfileSettings";
 
 function App() {
   /* return <Startup />; */

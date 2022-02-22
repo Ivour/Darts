@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Card from "./Card";
+import Card from "../../layout/Card";
 import styles from "./GameOptions.module.css";
 import ReusableSelect from "./ReusableSelect";
 

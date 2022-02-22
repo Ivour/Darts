@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./StatsTable.module.css";
 import { Typography } from "@mui/material";
-import Card from "./Card";
+import Card from "../layout/Card";
 import StatsPlayerData from "./StatsPlayerData";
 
 const StatsTable = () => {

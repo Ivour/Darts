@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Typography } from "@mui/material";
-import Card from "./Card";
+import Card from "../layout/Card";
 import styles from "./Signup.module.css";
 import { Button, TextField } from "@mui/material";
 

@@ -1,11 +1,11 @@
 import React from "react";
 import { Fragment } from "react";
 import { Button } from "@mui/material";
-import Navbar from "./Navbar";
+import Navbar from "../../layout/Navbar";
 import Players from "./Players";
 import GameOptions from "./GameOptions";
 import styles from "./Startup.module.css";
-import Card from "./Card";
+import Card from "../../layout/Card";
 
 const Startup = () => {
   return (

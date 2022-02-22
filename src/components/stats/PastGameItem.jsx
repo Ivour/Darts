@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import Card from "./Card";
+import Card from "../layout/Card";
 import styles from "./PastGameItem.module.css";
 
 import ItemScores from "./ItemScores";

@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "../layout/Navbar";
 import PastGameItem from "./PastGameItem";
 
 const dummy_data = [
