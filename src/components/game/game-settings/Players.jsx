@@ -4,7 +4,6 @@ import AddPlayer from "./AddPlayer";
 import PlayerCheckbox from "./PlayerCheckbox";
 import styles from "./Players.module.css";
 import MultipleSelect from "./MultipleSelect";
-import MultipleSelectCheckmarks from "./MultipleSelect";
 import Card from "../../layout/Card";
 
 const Players = () => {
@@ -16,7 +15,7 @@ const Players = () => {
         </Typography>
         <PlayerCheckbox user="Ivour" />
         <PlayerCheckbox user="Oťák" />
-        <MultipleSelectCheckmarks />
+        <MultipleSelect />
 
         <Button
           color="primary"

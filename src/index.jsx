@@ -5,12 +5,15 @@ import App from "./App";
 import { StyledEngineProvider } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./helpers/theme";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
-        <App />
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
       </ThemeProvider>
     </StyledEngineProvider>
   </React.StrictMode>,

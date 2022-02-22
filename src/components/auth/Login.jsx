@@ -46,9 +46,6 @@ const Login = () => {
         >
           Log in
         </Button>
-        <Typography fontSize="small">
-          Don't have an account? Click here to sign up
-        </Typography>
       </form>
     </Card>
   );
