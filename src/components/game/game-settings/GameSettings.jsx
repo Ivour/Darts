@@ -6,8 +6,16 @@ import Players from "./PlayersSettings";
 import GameOptions from "./ScoresSettings";
 import styles from "./GameSettings.module.css";
 import Card from "../../layout/Card";
+import { useNavigate } from "react-router-dom";
 
 const GameSettings = () => {
+  const navigate = useNavigate();
+
+  const startGameHandler = () => {
+    //send formulář to firebase
+    navigate("/game");
+  };
+
   return (
     <Fragment>
       <Navbar isGameSettings={true} />
@@ -20,6 +28,7 @@ const GameSettings = () => {
             color="primary"
             size="large"
             sx={{ margin: "1em" }}
+            onClick={startGameHandler}
           >
             Start game
           </Button>

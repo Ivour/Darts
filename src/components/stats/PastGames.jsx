@@ -52,7 +52,7 @@ const dummy_data = [
 const PastGames = () => {
   return (
     <>
-      <Navbar isGame={true} />
+      <Navbar isPastGames={true} />
       {dummy_data.map((obj, i) => (
         <PastGameItem data={obj} count={i + 1} key={i} />
       ))}

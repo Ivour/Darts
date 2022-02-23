@@ -6,8 +6,47 @@ import { useAuthContext } from "../../store/AuthContext";
 import ChipWithMenu from "./ChipWithMenu";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ isGame, isGameSettings }) => {
+const Navbar = ({
+  isGame,
+  isProfileSettings,
+  isPastGames,
+  isStats,
+  isGameSettings,
+}) => {
   const { user } = useAuthContext();
+
+  if (isProfileSettings) {
+    return (
+      <nav className={styles.nav}>
+        <Button
+          variant="outlined"
+          color="primary"
+          className={styles["nav__buttons"]}
+        >
+          Cancel
+        </Button>
+        <ChipWithMenu />
+      </nav>
+    );
+  }
+
+  if (isStats || isPastGames) {
+    return (
+      <nav className={styles.nav}>
+        <Button
+          variant="outlined"
+          color="primary"
+          className={styles["nav__button"]}
+          component={Link}
+          to="/options"
+        >
+          back
+        </Button>
+        <ChipWithMenu />
+      </nav>
+    );
+  }
+
   if (isGame) {
     return (
       <nav className={styles.nav}>
@@ -16,15 +55,16 @@ const Navbar = ({ isGame, isGameSettings }) => {
           color="primary"
           className={styles["nav__button"]}
         >
-          Reset
+          Play Again
         </Button>
         <Button
           variant="outlined"
           color="primary"
           className={styles["nav__buttons"]}
         >
-          Cancel
+          End Game
         </Button>
+        {user && <ChipWithMenu isGame={isGame} />}
       </nav>
     );
   }
@@ -58,7 +98,7 @@ const Navbar = ({ isGame, isGameSettings }) => {
               component={Link}
               to="/games"
             >
-              games
+              past games
             </Button>
             <Button
               variant="outlined"

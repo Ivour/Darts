@@ -7,7 +7,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useAuthContext } from "../../store/AuthContext";
 import { useNavigate } from "react-router-dom";
 
-export default function BasicMenu() {
+export default function ChipWithMenu({ isGame }) {
   const { signout, user } = useAuthContext();
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -18,10 +18,15 @@ export default function BasicMenu() {
   const handleClose = async (e) => {
     try {
       setAnchorEl(null);
+
       if (e.currentTarget.id === "logout") {
         await signout();
         navigate("/");
       }
+      if (e.currentTarget.id === "profile") navigate("/profile");
+
+      if (e.currentTarget.id === "profile-settings")
+        navigate("/profile-settings");
     } catch (e) {}
   };
 
@@ -57,12 +62,19 @@ export default function BasicMenu() {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose} id="myAccount">
-          My account
-        </MenuItem>
+        {!isGame && (
+          <MenuItem onClick={handleClose} id="profile">
+            Profile
+          </MenuItem>
+        )}
+        {!isGame && (
+          <MenuItem onClick={handleClose} id="profile-settings">
+            Account Settings
+          </MenuItem>
+        )}
+
         <MenuItem onClick={handleClose} id="logout">
-          Logout
+          {isGame ? "End game and logout" : "Logout"}
         </MenuItem>
       </Menu>
     </div>

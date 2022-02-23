@@ -11,6 +11,9 @@ const Game = () => {
   return (
     <Fragment>
       <Navbar isGame={true} />
+      {
+        //modal window před ukončením hry, po stisku end game
+      }
       <div className={styles.game}>
         <PlayerScore />
         <PlayerScore />
