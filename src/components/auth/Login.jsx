@@ -1,24 +1,40 @@
-import React, { useRef, useState } from "react";
-import { Typography } from "@mui/material";
+import React, { useState } from "react";
+import { Alert } from "@mui/material";
 import Card from "../layout/Card";
 import styles from "./Signup.module.css";
 import { Button, TextField } from "@mui/material";
 import { useAuthContext } from "../../store/AuthContext";
 
 const Login = () => {
+  const [hasError, setHasError] = useState(false);
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-  const authCtx = useAuthContext();
+  const { logIn } = useAuthContext();
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
-    authCtx.logIn(email, pass);
+    setHasError(false);
+
+    try {
+      await logIn(email, pass);
+    } catch (err) {
+      setHasError(err.message);
+    }
   };
 
   return (
     <Card>
       <form className={styles["sign-up"]} onSubmit={submitHandler}>
         <h3 className={styles["sign-up__title"]}>Log in </h3>
+        {hasError && (
+          <Alert
+            variant="outlined"
+            severity="error"
+            sx={{ marginBottom: "1em", borderRadius: "0.6em", maxWidth: "90%" }}
+          >
+            {hasError}
+          </Alert>
+        )}
 
         <TextField
           label="Email"

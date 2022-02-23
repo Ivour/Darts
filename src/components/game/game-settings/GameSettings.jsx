@@ -7,7 +7,7 @@ import GameOptions from "./ScoresSettings";
 import styles from "./GameSettings.module.css";
 import Card from "../../layout/Card";
 
-const Startup = () => {
+const GameSettings = () => {
   return (
     <Fragment>
       <Navbar isGameSettings={true} />
@@ -29,4 +29,4 @@ const Startup = () => {
   );
 };
 
-export default Startup;
+export default GameSettings;

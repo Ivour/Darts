@@ -1,7 +1,6 @@
-import { Fragment, useEffect, useState } from "react";
 import Game from "./components/game/Game";
 import Navbar from "./components/layout/Navbar";
-import Startup from "./components/game/game-settings/GameSettings";
+import GameSettings from "./components/game/game-settings/GameSettings";
 import PastGames from "./components/stats/PastGames";
 import Stats from "./components/stats/Stats";
 import Login from "./components/auth/Login";
@@ -12,11 +11,12 @@ import Welcome from "./components/auth/Welcome";
 import { useAuthContext } from "./store/AuthContext";
 
 function App() {
-  const { user } = useAuthContext();
   return (
     <Routes>
-      <Route path="/" element={user ? <Startup /> : <Welcome />} />
-      <Route path={"options"} element={<Startup />} />
+      <Route path="/" element={<Welcome />} />
+      <Route path={"options"} element={<GameSettings />} />
+      <Route path={"games"} element={<PastGames />} />
+      <Route path={"stats"} element={<Stats />} />
     </Routes>
   );
   /* return <Startup />; */

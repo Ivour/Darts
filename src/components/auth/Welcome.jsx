@@ -5,10 +5,12 @@ import styles from "./Welcome.module.css";
 import { Chip, Typography } from "@mui/material";
 import Login from "./Login";
 import { useNavigate } from "react-router-dom";
+import { useAuthContext } from "../../store/AuthContext";
 
 const Welcome = () => {
-  const [loginIsVisible, setLoginIsVisible] = useState(false);
+  const [loginIsVisible, setLoginIsVisible] = useState(true);
   const navigate = useNavigate();
+  const { user } = useAuthContext();
   const toggleLoginHandler = () => {
     setLoginIsVisible((prevState) => !prevState);
   };
@@ -16,6 +18,7 @@ const Welcome = () => {
     navigate("options");
   };
 
+  if (user) navigate("options");
 
   return (
     <>

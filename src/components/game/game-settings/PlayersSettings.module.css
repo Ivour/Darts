@@ -1,15 +1,14 @@
 .players {
-  display: flex;
-  flex-direction: column;
-  height: 16rem;
-
-  margin: 2rem auto 1em auto;
+  margin: 2rem auto 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2rem 3rem 4rem 1fr;
   justify-items: center;
   align-items: center;
   gap: 0.5rem;
+}
+.players--not-logged {
+  grid-template-rows: 1fr 1.5fr;
 }
 
 .players__title {

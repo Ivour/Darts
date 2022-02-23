@@ -3,32 +3,59 @@ import { auth } from "../../config/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import Card from "../layout/Card";
 import styles from "./Signup.module.css";
-import { Button, TextField } from "@mui/material";
+import { Button, TextField, Alert } from "@mui/material";
 import { useAuthContext } from "../../store/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
-  const [passHasError, setPassHasError] = useState(false);
-  const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
-  const [pass, setPass] = useState("");
-  const [passAgain, setPassAgain] = useState("");
-  const { signUp, user } = useAuthContext();
+  const [hasError, setHasError] = useState(false);
+  const [email, setEmail] = useState("i@l.cs");
+  const [username, setUsername] = useState("Ivour");
+  const [pass, setPass] = useState("aaaaaa");
+  const [passAgain, setPassAgain] = useState("aaaaaa");
+  const { signUp, user, addUsername } = useAuthContext();
+  const navigate = useNavigate();
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
+    setHasError(false);
+
     if (pass !== passAgain) {
+      setHasError("passwords are not same");
+      return;
+    }
+
+    try {
+      await signUp(email, pass);
+      if (username) await addUsername(username);
+
+      navigate("options");
+    } catch (err) {
+      setHasError(err.message);
+    }
+
+    /* if (pass !== passAgain) {
       setPassHasError(true);
       return;
     } else {
       signUp(email, pass);
     }
-    setPassHasError(false);
+    setPassHasError(false); */
   };
 
   return (
     <Card>
       <form className={styles["sign-up"]} onSubmit={submitHandler}>
         <h3 className={styles["sign-up__title"]}>Sign Up</h3>
+        {hasError && (
+          <Alert
+            variant="outlined"
+            severity="error"
+            sx={{ marginBottom: "1em", borderRadius: "0.6em", maxWidth: "90%" }}
+          >
+            {hasError}
+          </Alert>
+        )}
 
         <TextField
           label="Email"
@@ -40,7 +67,7 @@ const Signup = () => {
           value={email}
         />
         <TextField
-          label="Username"
+          label="Username - optional"
           variant="outlined"
           autoComplete="off"
           size="small"
@@ -60,8 +87,7 @@ const Signup = () => {
           value={pass}
         />
         <TextField
-          error={passHasError}
-          label={passHasError ? "passwords are not same" : "repeat password"}
+          label="Repeat password"
           variant="outlined"
           type="password"
           size="small"
