@@ -1,8 +1,12 @@
 import React from "react";
 import styles from "./Navbar.module.css";
-import { Button, Typography } from "@mui/material";
+import { Button, Typography, Chip } from "@mui/material";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { useAuthContext } from "../../store/AuthContext";
+import ChipWithMenu from "./ChipWithMenu";
 
-const Navbar = ({ isGame, isStartup }) => {
+const Navbar = ({ isGame, isGameSettings }) => {
+  const { user } = useAuthContext();
   return (
     <>
       {isGame && (
@@ -24,16 +28,10 @@ const Navbar = ({ isGame, isStartup }) => {
         </nav>
       )}
 
-      {isStartup && (
+      {isGameSettings && (
         <nav className={`${styles.nav} ${styles["nav--game"]}`}>
           {/* <Typography className={styles["nav__logo"]}>DARTS APP</Typography> */}
-          <Button
-            variant="outlined"
-            color="primary"
-            className={styles["nav__buttons"]}
-          >
-            New Game
-          </Button>
+
           <Button
             variant="outlined"
             color="primary"
@@ -48,6 +46,7 @@ const Navbar = ({ isGame, isStartup }) => {
           >
             Stats
           </Button>
+          {user && <ChipWithMenu />}
         </nav>
       )}
     </>

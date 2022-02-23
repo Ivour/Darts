@@ -4,13 +4,15 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import Card from "../layout/Card";
 import styles from "./Signup.module.css";
 import { Button, TextField } from "@mui/material";
+import { useAuthContext } from "../../store/AuthContext";
 
 const Signup = () => {
   const [passHasError, setPassHasError] = useState(false);
   const [email, setEmail] = useState("");
-  const [user, setUser] = useState("");
+  const [username, setUsername] = useState("");
   const [pass, setPass] = useState("");
   const [passAgain, setPassAgain] = useState("");
+  const { signUp, user } = useAuthContext();
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -18,10 +20,9 @@ const Signup = () => {
       setPassHasError(true);
       return;
     } else {
-      createUserWithEmailAndPassword(auth, email, pass);
+      signUp(email, pass);
     }
     setPassHasError(false);
-    console.log(user, email, pass);
   };
 
   return (
@@ -44,8 +45,8 @@ const Signup = () => {
           autoComplete="off"
           size="small"
           color="warning"
-          onChange={(e) => setUser(e.target.value)}
-          value={user}
+          onChange={(e) => setUsername(e.target.value)}
+          value={username}
           sx={{ margin: "0.5em" }}
         />
         <TextField

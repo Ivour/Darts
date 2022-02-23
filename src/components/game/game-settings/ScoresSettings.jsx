@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Card from "../../layout/Card";
-import styles from "./GameOptions.module.css";
+import styles from "./ScoresSettings.module.css";
 import ReusableSelect from "./ReusableSelect";
 
 const GameOptions = () => {

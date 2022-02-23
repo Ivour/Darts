@@ -16,6 +16,7 @@ const Welcome = () => {
     navigate("options");
   };
 
+
   return (
     <>
       <Card>

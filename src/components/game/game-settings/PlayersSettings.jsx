@@ -2,7 +2,7 @@ import { Typography, Button } from "@mui/material";
 import React, { Fragment } from "react";
 import AddPlayer from "./AddPlayer";
 import PlayerCheckbox from "./PlayerCheckbox";
-import styles from "./Players.module.css";
+import styles from "./PlayersSettings.module.css";
 import MultipleSelect from "./MultipleSelect";
 import Card from "../../layout/Card";
 
@@ -15,6 +15,7 @@ const Players = () => {
         </Typography>
         <PlayerCheckbox user="Ivour" />
         <PlayerCheckbox user="Oťák" />
+
         <MultipleSelect />
 
         <Button

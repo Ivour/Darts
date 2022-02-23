@@ -3,13 +3,16 @@ import { Typography } from "@mui/material";
 import Card from "../layout/Card";
 import styles from "./Signup.module.css";
 import { Button, TextField } from "@mui/material";
+import { useAuthContext } from "../../store/AuthContext";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
+  const authCtx = useAuthContext();
 
   const submitHandler = (e) => {
     e.preventDefault();
+    authCtx.logIn(email, pass);
   };
 
   return (

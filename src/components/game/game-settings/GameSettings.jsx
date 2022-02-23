@@ -2,15 +2,15 @@ import React from "react";
 import { Fragment } from "react";
 import { Button } from "@mui/material";
 import Navbar from "../../layout/Navbar";
-import Players from "./Players";
-import GameOptions from "./GameOptions";
-import styles from "./Startup.module.css";
+import Players from "./PlayersSettings";
+import GameOptions from "./ScoresSettings";
+import styles from "./GameSettings.module.css";
 import Card from "../../layout/Card";
 
 const Startup = () => {
   return (
     <Fragment>
-      <Navbar isStartup={true} />
+      <Navbar isGameSettings={true} />
       <Players />
       <GameOptions />
       <Card>
