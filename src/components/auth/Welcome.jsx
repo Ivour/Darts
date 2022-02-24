@@ -10,15 +10,13 @@ import { useAuthContext } from "../../store/AuthContext";
 const Welcome = () => {
   const [loginIsVisible, setLoginIsVisible] = useState(true);
   const navigate = useNavigate();
-  const { user } = useAuthContext();
+
   const toggleLoginHandler = () => {
     setLoginIsVisible((prevState) => !prevState);
   };
   const continueWithoutHandler = () => {
     navigate("options");
   };
-
-  if (user) navigate("options");
 
   return (
     <>

@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import { Button } from "@mui/material";
 import Navbar from "../../layout/Navbar";
 import Players from "./PlayersSettings";
-import GameOptions from "./ScoresSettings";
+import ScoresSettings from "./ScoresSettings";
 import styles from "./GameSettings.module.css";
 import Card from "../../layout/Card";
 import { useNavigate } from "react-router-dom";
@@ -20,7 +20,7 @@ const GameSettings = () => {
     <Fragment>
       <Navbar isGameSettings={true} />
       <Players />
-      <GameOptions />
+      <ScoresSettings />
       <Card>
         <div className={styles.start}>
           <Button

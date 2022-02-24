@@ -9,10 +9,10 @@ import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const [hasError, setHasError] = useState(false);
-  const [email, setEmail] = useState("i@l.cs");
-  const [username, setUsername] = useState("Ivour");
-  const [pass, setPass] = useState("aaaaaa");
-  const [passAgain, setPassAgain] = useState("aaaaaa");
+  const [email, setEmail] = useState("test@seznam.cz");
+  const [username, setUsername] = useState("Seznam");
+  const [pass, setPass] = useState("");
+  const [passAgain, setPassAgain] = useState("");
   const { signUp, user, addUsername } = useAuthContext();
   const navigate = useNavigate();
 

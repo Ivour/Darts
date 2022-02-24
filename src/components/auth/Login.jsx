@@ -1,15 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Alert } from "@mui/material";
 import Card from "../layout/Card";
 import styles from "./Signup.module.css";
 import { Button, TextField } from "@mui/material";
 import { useAuthContext } from "../../store/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [hasError, setHasError] = useState(false);
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-  const { logIn } = useAuthContext();
+  const { logIn, user } = useAuthContext();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user) navigate("/options");
+  }, [user, navigate]);
+
+  // TODO  je to tak správně???
 
   const submitHandler = async (e) => {
     e.preventDefault();

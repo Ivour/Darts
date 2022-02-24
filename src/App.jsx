@@ -23,13 +23,6 @@ function App() {
       <Route path="profile-settings" element={<ProfileSettings />} />
     </Routes>
   );
-  /* return <Startup />; */
-  /*  return <Game />; */
-  /* return <PastGames />; */
-  /*  return <Stats />; */
-  /* return <Login />; */
-  /* return <ProfileSettings />; */
-  /*  return <Signup />; */
 }
 
 export default App;

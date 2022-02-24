@@ -1,0 +1,13 @@
+.profile-settings__account {
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  justify-items: end;
+}
+
+.profile-settings__logout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

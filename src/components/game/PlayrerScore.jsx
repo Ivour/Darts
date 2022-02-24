@@ -33,9 +33,7 @@ const PlayerScore = () => {
           sx={{ borderRadius: "0.6em", minWidth: "2.5em" }}
         ></Chip>
       </div>
-      <Typography className={styles["scores__sum"]} f>
-        123
-      </Typography>
+      <Typography className={styles["scores__sum"]}>123</Typography>
       <Typography className={styles["scores__sets"]} fontSize="small">
         sets: 0 legs:1
       </Typography>

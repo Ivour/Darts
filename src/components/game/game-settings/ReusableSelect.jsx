@@ -42,8 +42,10 @@ export default function ReusableSelect({
           },
         }}
       >
-        {arrValues.map((n) => (
-          <MenuItem value={n}>{n}</MenuItem>
+        {arrValues.map((n, i) => (
+          <MenuItem key={i} value={n}>
+            {n}
+          </MenuItem>
         ))}
       </Select>
     </FormControl>
