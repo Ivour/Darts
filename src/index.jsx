@@ -7,15 +7,18 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./config/theme";
 import { BrowserRouter } from "react-router-dom";
 import { AuthContextProvider } from "./store/AuthContext";
+import { OptionsContextProvider } from "./store/OptionsContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
         <AuthContextProvider>
-          <BrowserRouter>
-            <App />
-          </BrowserRouter>
+          <OptionsContextProvider>
+            <BrowserRouter>
+              <App />
+            </BrowserRouter>
+          </OptionsContextProvider>
         </AuthContextProvider>
       </ThemeProvider>
     </StyledEngineProvider>

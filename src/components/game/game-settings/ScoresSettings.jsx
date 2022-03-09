@@ -27,7 +27,7 @@ const GameOptions = () => {
         />
         <ReusableSelect
           arrValues={["single out", "double out"]}
-          label={"Check out"}
+          label={"Checkout"}
           minWidth={"8rem"}
           initialVal={"single out"}
         />

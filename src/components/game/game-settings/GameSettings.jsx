@@ -7,12 +7,13 @@ import ScoresSettings from "./ScoresSettings";
 import styles from "./GameSettings.module.css";
 import Card from "../../layout/Card";
 import { useNavigate } from "react-router-dom";
+import { useOptionsContext } from "../../../store/OptionsContext";
 
 const GameSettings = () => {
   const navigate = useNavigate();
+  const { players } = useOptionsContext();
 
   const startGameHandler = () => {
-    //send formulář to firebase
     navigate("/game");
   };
 
@@ -29,6 +30,7 @@ const GameSettings = () => {
             size="large"
             sx={{ margin: "1em" }}
             onClick={startGameHandler}
+            disabled={players.length < 1}
           >
             Start game
           </Button>

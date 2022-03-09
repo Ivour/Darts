@@ -67,6 +67,18 @@ const ProfileSettings = () => {
           </Button>
         </div>
       </Card>
+      <Card>
+        <div className={styles["profile-settings__logout"]}>
+          <Button
+            variant="outlined"
+            color="error"
+            sx={{ textAlign: "center" }}
+            onClick={logoutHandler}
+          >
+            Delete account
+          </Button>
+        </div>
+      </Card>
     </Fragment>
   );
 };

@@ -8,6 +8,8 @@ import { getAuth } from "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyDYY0LyoBWhGxjAZcEygAHo31YAqAJa4sQ",
   authDomain: "darts-18325.firebaseapp.com",
+  databaseURL:
+    "https://darts-18325-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "darts-18325",
   storageBucket: "darts-18325.appspot.com",
   messagingSenderId: "645563881222",

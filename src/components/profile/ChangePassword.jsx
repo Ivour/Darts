@@ -27,7 +27,10 @@ const ChangePassword = () => {
     setHasError(false);
 
     try {
+      if (newPass.length === 0) throw new Error("Fill in the new password");
+
       await logIn(user.email, currentPass);
+
       await changePassword(newPass);
       e.target.blur();
       resetForm();

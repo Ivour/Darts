@@ -6,15 +6,17 @@ import styles from "./Signup.module.css";
 import { Button, TextField, Alert } from "@mui/material";
 import { useAuthContext } from "../../store/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { getDatabase, ref, set } from "firebase/database";
 
 const Signup = () => {
   const [hasError, setHasError] = useState(false);
-  const [email, setEmail] = useState("test@seznam.cz");
-  const [username, setUsername] = useState("Seznam");
+  const [email, setEmail] = useState("test1@test.cz");
+  const [username, setUsername] = useState("Test");
   const [pass, setPass] = useState("");
   const [passAgain, setPassAgain] = useState("");
   const { signUp, user, addUsername } = useAuthContext();
   const navigate = useNavigate();
+  const db = getDatabase();
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -26,8 +28,10 @@ const Signup = () => {
     }
 
     try {
-      await signUp(email, pass);
+      const res = await signUp(email, pass);
+
       if (username) await addUsername(username);
+      set(ref(db, `users/${res.user.uid}`), { username });
 
       navigate("options");
     } catch (err) {

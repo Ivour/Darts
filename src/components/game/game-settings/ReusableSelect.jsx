@@ -3,6 +3,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import { FormControl } from "@mui/material";
 import Select from "@mui/material/Select";
+import { useOptionsContext } from "../../../store/OptionsContext";
 
 export default function ReusableSelect({
   arrValues,
@@ -10,10 +11,13 @@ export default function ReusableSelect({
   minWidth,
   initialVal,
 }) {
-  const [age, setAge] = React.useState(initialVal);
+  const { scores, setPoints } = useOptionsContext();
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setPoints(event.target.value, label);
+    /* if (label === "Sets") setPoints(event.target.value);
+    if (label === "Legs") setPoints(event.target.value);
+    if (label === "Check out") setPoints(event.target.value); */
   };
 
   return (
@@ -31,8 +35,8 @@ export default function ReusableSelect({
       <Select
         labelId="demo-simple-select-autowidth-label"
         id="demo-simple-select-autowidth"
-        value={age}
         onChange={handleChange}
+        value={scores[label]}
         color="primary"
         label={label}
         sx={{
